@@ -1,25 +1,97 @@
-# 项目描述
 
-## 第一个vue项目
+## 用(传统方式)命令行把修改过后的代码上传到码云？？？
+1. git add .
+2. git commit -m "提交信息"
+3. git push
 
+## 制作首页App组件
+1. 完成 Header 区域，使用的是 Mint-UI 中的Header组件
+2. 制作底部的 Tabbar 区域，使用的是 MUI 的 Tabbar.html
+ + 在制作 购物车 小图标的时候，操作会相对多一些：
+ + 先把 扩展图标的 css 样式，拷贝到 项目中
+ + 拷贝 扩展字体库 ttf 文件，到项目中
+ + 为 购物车 小图标 ，添加 如下样式 `mui-icon mui-icon-extra mui-icon-extra-cart`
+3. 要在 中间区域放置一个 router-view 来展示路由匹配到的组件
 
-## 制作首页app组件dsa
-1. 完成Header区域 使用 mint-ui 得到header组件
-2. 底部的tabber 区域 使用 mui的tabbar.htm 
-    + 购物车小图标需要：
-    + 需extra样式表
-    + 扩展字体库 .ttf
-    + 购物车 小图标 添加两个类 'mui-icon-extra mui-icon-extra-cart' 
-3. 底部放置一个 router-view 展示路由匹配内容
-
-
-## 该做tabbar 为 outer-link
+## 改造 tabbar 为 router-link
 
 ## 设置路由高亮
 
-## 点击 tabbar路由连接 ，展示对应内容
+## 点击 tabbar 中的路由链接，展示对应的路由组件
 
-## 制作首页轮布局布局
+## 制作首页轮播图布局
 
-## 加在轮播图数据
-1. 获取数据  vue-resourse
+## 加载首页轮播图数据
+1. 获取数据， 如何获取呢， 使用 vue-resource
+2. 使用 vue-resource 的 this.$http.get 获取数据
+3. 获取到的数据，要保存到 data 身上
+4. 使用 v-for 循环渲染 每个 item 项
+
+## 改造 九宫格 区域的样式
+
+## 新闻链接
+
+
+## 新闻页面
+1. 绘制界面 mui中的 media-list
+2. 获取数据
+3. 渲染数据  
+
+
+## 新闻列表点击 详情
+1. 列表项router-link  跳转提供唯一标识符 id
+2. 新闻详情页面
+3. router.js 中 对应起来
+
+##  单独封装一个 commen。vue组件
+
+1. 创建模板组件
+2. 导入组件
+ +  `import comment from 路径 `
+3. 在父组件中 使用 components 属性 注册 
+4. 标签形式 在需要页面中引用
+
+## 评论数据渲染
+
+## 实现加在更多
+1. 为加载更多绑事件 
+2. pageindex+1 重新调用this.getComments
+
+## 发表评论
+1. 绑定双向数据
+2. 按钮绑定事件
+3. 文本框不为空 提示
+4. 发送请求 提交给服务器 
+5. 刷新列表查看最新评论
+ +  放在新数组里 添加到原本里面unshift
+
+ ## 图片分享按钮
+
+ ## 绘制图片列表
+ 1. 顶部滑动条
+ 2. 底部图片列表
+
+### 顶部滑动条
+1. 借助 mui
++ 导入mui.js
++ 调用官方提供方式
+
+
+### 图片列表去
+1. 图片懒加载 mint-ui
+2. 根据使用文档
+3. 渲染图片列表
+
+### 图片列表懒加载 和样式美化
+
+
+## 实现点击图片 跳转详情页面
+1. li 改造成router-link是 需要tag元素
+
+
+##  实现详情页面实现
+
+## 缩略图
+1. 有坑！！！！ vue-preview   新版中要带有缩略图路径（服务器未提供）
+2. vfor渲染
+3. w h 属性
