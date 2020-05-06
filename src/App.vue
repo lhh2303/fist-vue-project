@@ -39,7 +39,8 @@
 
 <style lang="scss" scoped>
 .app-contanier{
-  padding-top: 40px;
+  padding-top: 40px ;
+  padding-bottom: 50px;
   overflow-x: hidden;
 }
 .v-enter {
