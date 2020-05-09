@@ -100,6 +100,15 @@ export default {
         },
         addToShopCar(){
             this.ballFlag = ! this.ballFlag
+            // 要存入store数组中的商品对象信息
+            var goodsinfo ={
+                id: this.id,
+                count: this.selectedCount,
+                price: this.goodsinfo.sell_price,
+                selected: true
+            }
+            // 调用store 讲商品加入购物车
+            this.$store.commit('addToCar',goodsinfo)
         },
         beforeEnter(el){
             el.style.transform ="translate(0,0)"
